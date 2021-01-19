@@ -49,6 +49,7 @@ public class XimalayApi {
         CommonRequest.getGuessLikeAlbum(map, callback);
     }
 
+    //新加
     /**
      * 根据专辑id获取专辑内容详情
      *
