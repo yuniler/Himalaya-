@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="https://schemas.android.com/apk/res/android" tools:ignore="NamespaceTypo">
+
+    <item android:drawable="@drawable/flow_text_bg_press" android:state_pressed="true" />
+    <item android:drawable="@drawable/flow_text_bg" />
+
+</selector>
