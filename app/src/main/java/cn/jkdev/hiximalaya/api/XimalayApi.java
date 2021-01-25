@@ -86,7 +86,7 @@ public class XimalayApi {
      * 获取推荐的热词
      * @param callback
      */
-    public void getHotWord(IDataCallBack<HotWordList> callback){
+    public void getHotWords(IDataCallBack<HotWordList> callback){
         Map<String, String> map = new HashMap<>();
         map.put(DTransferConstants.TOP, String.valueOf(Constants.COUNT_HOT_WORD));
         CommonRequest.getHotWords(map, callback);

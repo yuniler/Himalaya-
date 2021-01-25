@@ -49,6 +49,7 @@ public class SearchActivity extends BaseActivity implements ISearchCallback {
         //注册UI更新接口
         mSearchPresenter.registerViewCallback(this);//注册UI接口
         //去拿热词
+        mSearchPresenter.getHotWord();
     }
 
     @Override
@@ -72,7 +73,7 @@ public class SearchActivity extends BaseActivity implements ISearchCallback {
         mSearchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO:执行搜索--调用搜索的逻辑            }
+                //TODO:执行搜索--调用搜索的逻辑
             }
         });
 

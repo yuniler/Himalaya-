@@ -54,7 +54,7 @@ public class SearchPresenter implements ISearchPresenter {
     }
 
     private void search(String keyword) {
-        this.mCurrentKeyword = keyword;
+//        this.mCurrentKeyword = keyword;
         mXimalayApi.searchByKeyword(keyword, mCurrentPage, new IDataCallBack<SearchAlbumList>() {//此时将数据返回给UI层
             @Override
             public void onSuccess(SearchAlbumList searchAlbumList) {
@@ -90,14 +90,14 @@ public class SearchPresenter implements ISearchPresenter {
 
     @Override
     public void getHotWord() {
-        mXimalayApi.getHotWord(new IDataCallBack<HotWordList>() {
+        mXimalayApi.getHotWords(new IDataCallBack<HotWordList>() {
             @Override
             public void onSuccess(HotWordList hotWordList) {
                 if (hotWordList != null) {
-                    List<HotWord> hotWord = hotWordList.getHotWordList();
-                    LogUtil.d(TAG,"hotWord size" + hotWord.size());
+                    List<HotWord> hotWords = hotWordList.getHotWordList();
+                    LogUtil.d(TAG,"hotWord size" + hotWords.size());
                     for (ISearchCallback iSearchCallback : mCallbacks) {//presenter拿回调--》再回到UI层
-                        iSearchCallback.onHotWordLoaded(hotWord);
+                        iSearchCallback.onHotWordLoaded(hotWords);
 
                     }
                 }
